@@ -1,0 +1,18 @@
+from django.contrib import admin
+from django.urls import path
+from maintenance import views
+
+urlpatterns = [
+    path('home',views.dashboard,name="home"),
+    path('users',views.Users,name="users"),
+    path('user_profil',views.user_profil,name="user_profil"),
+    path('tasks',views.tasks_gestion,name="tasks"),
+    path('delete_user/<int:id>',views.delete_user,name="delete_user"),
+    path('manage_tasks',views.manage_task,name="manage"),
+    path('edit_profil/<int:id>',views.edit_task,name="edit_task"),
+    path('news',views.news,name="news"),
+    path('delete_post/<int:id>',views.delete_post,name="delete_post"),
+    path('detail_post/<int:id>',views.detail_post,name="detail_post"),
+    path('like_post',views.like_post,name="like_post"),
+    path('edit_post/<int:id>',views.edit_post,name="edit_post")
+]
